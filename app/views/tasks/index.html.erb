@@ -2,10 +2,10 @@
 <ul>
   <% @tasks.each do |task|%>
     <li>
-      <%= task.title %>
+      <%= link_to task.title, "tasks/#{task.id}" %>
       <%= "DONE" if task.completed %>
-      <br>
-      <%= task.details %>
     </li>
   <% end  %>
 </ul>
+
+<%= link_to "Create New Task", "tasks/new" %>

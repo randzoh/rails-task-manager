@@ -1,0 +1,11 @@
+<h1>To-Do List</h1>
+<ul>
+  <% @tasks.each do |task|%>
+    <li>
+      <%= task.title %>
+      <%= "DONE" if task.completed %>
+      <br>
+      <%= task.details %>
+    </li>
+  <% end  %>
+</ul>

@@ -1,4 +1,5 @@
 class TasksController < ApplicationController
-  def all
+  def index
+    @tasks = Task.all
   end
 end
